@@ -46,6 +46,10 @@ public class App {
 		reflectorMap.put('B', 'A');
 		reflectorMap.put('C', 'D');
 		reflectorMap.put('D', 'C');
+		
+		Reflector reflector = new Reflector(reflectorMap);
+		
+		
 
 	}
 
