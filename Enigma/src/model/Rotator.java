@@ -2,10 +2,10 @@ package model;
 
 public class Rotator {
 
-	Integer[][] rotorValues;
+	int[][] rotorValues;
 	int rotorCounter;
 
-	public Rotator(Integer[][] rotorVal, int startingValue) {
+	public Rotator(int[][] rotorVal, int startingValue) {
 		this.rotorValues = rotorVal;
 		this.rotorCounter = startingValue;
 	}

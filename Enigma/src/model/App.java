@@ -14,6 +14,7 @@ public class App {
 				{3,1},
 				{4,2}
 		};
+		Rotator r1 = new Rotator(rotor1, 0);
 		
 		//Rotor2
 		int[][] rotor2 = {
