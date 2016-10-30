@@ -31,6 +31,8 @@ public class Rotator {
 		int result = 0;
 		int target = (i + rotationCounter)%rotorValues[0].length;
 		
+		System.out.println(target);
+		
 		for(int c = 0; c < rotorValues[1].length; c++) {
 			if(rotorValues[1][c] == rotorValues[0][target]) {
 				result = c;
