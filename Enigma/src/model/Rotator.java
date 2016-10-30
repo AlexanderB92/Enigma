@@ -3,11 +3,11 @@ package model;
 public class Rotator {
 
 	int[][] rotorValues;
-	int rotorCounter;
+	int rotationCounter;
 
 	public Rotator(int[][] rotorVal, int startingValue) {
 		this.rotorValues = rotorVal;
-		this.rotorCounter = startingValue;
+		this.rotationCounter = startingValue;
 	}
 
 	public int[][] getRotorValues() {
@@ -19,11 +19,29 @@ public class Rotator {
 	}
 
 	public int getRotorCounter() {
-		return rotorCounter;
+		return rotationCounter;
 	}
 
 	public void setRotorCounter(int rotorCounter) {
-		this.rotorCounter = rotorCounter;
+		this.rotationCounter = rotorCounter;
+	}
+	
+	public int rightOutput(int i) {
+		
+		int result = 0;
+		int target = (i + rotationCounter)%rotorValues[0].length;
+		
+		for(int c = 0; c < rotorValues[1].length; c++) {
+			if(rotorValues[1][c] == rotorValues[0][target]) {
+				result = c;
+			}
+		}
+		
+		return result;		
+	}
+	
+	public void rotateRotor() {
+		rotationCounter++;
 	}
 
 }
