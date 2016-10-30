@@ -9,4 +9,21 @@ public class Rotator {
 		this.rotorValues = rotorVal;
 		this.rotorCounter = startingValue;
 	}
+
+	public int[][] getRotorValues() {
+		return rotorValues;
+	}
+
+	public void setRotorValues(int[][] rotorValues) {
+		this.rotorValues = rotorValues;
+	}
+
+	public int getRotorCounter() {
+		return rotorCounter;
+	}
+
+	public void setRotorCounter(int rotorCounter) {
+		this.rotorCounter = rotorCounter;
+	}
+
 }
