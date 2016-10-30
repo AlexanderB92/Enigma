@@ -43,11 +43,19 @@ public class Rotator {
 	
 	public void rotateRotor() {
 		
-		int[][] dummy = rotorValues;
+		System.out.println(rotorValues.length);
 		
-		for(int i = 0; i < dummy[0].length; i++) {
-			rotorValues[0][(i+1) % rotorValues.length] = dummy[0][i];
-			rotorValues[1][(i+1) % rotorValues.length] = dummy[1][i];
+		int[][] dummy = new int[rotorValues.length][rotorValues[0].length];
+		
+		for(int i = 0; i < rotorValues[0].length; i++) {
+			rotorValues[0][(i+1) % rotorValues[0].length] = dummy[0][i];
+			rotorValues[1][(i+1) % rotorValues[1].length] = dummy[1][i];
+		}
+	}
+	
+	public void printArrays() {
+		for(int i = 0; i < rotorValues[0].length; i++) {
+			System.out.println(rotorValues[0][i] + " " + rotorValues[1][i]);
 		}
 	}
 

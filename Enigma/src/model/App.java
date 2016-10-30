@@ -45,11 +45,11 @@ public class App {
 		
 		Encryption encryption = new Encryption(r1, r2, r3, reflector);
 		
-		encryption.encrypt('A');
-		
+		//encryption.encrypt('A');
 		r1.rotateRotor();
+	
 		
-		encryption.encrypt('A');
+		//encryption.encrypt('A');
 		
 
 	}
