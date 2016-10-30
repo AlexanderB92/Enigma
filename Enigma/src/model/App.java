@@ -8,7 +8,7 @@ public class App {
 	public static void main(String[] args) {
 		
 		//STARTING ROTATOR POSITIONS
-		int startingPos1 = 1;
+		int startingPos1 = 0;
 		int startingPos2 = 0;
 		int startingPos3 = 0;
 		
@@ -44,6 +44,10 @@ public class App {
 		Reflector reflector = new Reflector(reflectorMap);
 		
 		Encryption encryption = new Encryption(r1, r2, r3, reflector);
+		
+		encryption.encrypt('A');
+		
+		r1.rotateRotor();
 		
 		encryption.encrypt('A');
 		
