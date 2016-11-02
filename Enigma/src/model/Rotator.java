@@ -25,36 +25,40 @@ public class Rotator {
 	public void setRotorCounter(int rotorCounter) {
 		this.rotationCounter = rotorCounter;
 	}
-	
+
 	public int rightOutput(int i) {
-		
+
 		int result = 0;
 		int target = i;
-//		int target = (i + rotationCounter)%rotorValues[0].length;
-		
-		for(int c = 0; c < rotorValues[1].length; c++) {
-			if(rotorValues[1][c] == rotorValues[0][target]) {
+		// int target = (i + rotationCounter)%rotorValues[0].length;
+
+		for (int c = 0; c < rotorValues[1].length; c++) {
+			if (rotorValues[1][c] == rotorValues[0][target]) {
 				result = c;
 			}
 		}
-		
-		return result;		
+
+		return result;
 	}
-	
+
 	public void rotateRotor() {
-		
-		System.out.println(rotorValues.length);
-		
-		int[][] dummy = new int[rotorValues.length][rotorValues[0].length];
-		
-		for(int i = 0; i < rotorValues[0].length; i++) {
-			rotorValues[0][(i+1) % rotorValues[0].length] = dummy[0][i];
-			rotorValues[1][(i+1) % rotorValues[1].length] = dummy[1][i];
+
+		// Creating copy of 2D array rotorValues
+		int[][] arrayCopy = new int[rotorValues.length][];
+		for (int i = 0; i < rotorValues.length; i++) {
+			arrayCopy[i] = rotorValues[i].clone();
+		}
+
+		// Shift all arrays stored in the 2D array 1 to the right
+		for (int i = 0; i < rotorValues.length; i++) {
+			for (int j = 0; j < rotorValues[i].length; j++) {
+				rotorValues[i][(j + 1) % rotorValues[i].length] = arrayCopy[i][j];
+			}
 		}
 	}
-	
+
 	public void printArrays() {
-		for(int i = 0; i < rotorValues[0].length; i++) {
+		for (int i = 0; i < rotorValues[0].length; i++) {
 			System.out.println(rotorValues[0][i] + " " + rotorValues[1][i]);
 		}
 	}
