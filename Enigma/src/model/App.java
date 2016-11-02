@@ -45,16 +45,9 @@ public class App {
 		
 		Encryption encryption = new Encryption(r1, r2, r3, reflector);
 		
-		r1.printArrays();
-		//encryption.encrypt('A');
+		encryption.encrypt('B');
 		r1.rotateRotor();
-		
-		System.out.println();
-		
-		r1.printArrays();
-	
-		
-		//encryption.encrypt('A');
+		encryption.encrypt('B');
 		
 
 	}
