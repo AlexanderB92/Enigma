@@ -9,5 +9,14 @@ public class Reflector {
 	public Reflector(Map<Character, Character> reflectorMap) {
 		this.reflectorPairs = reflectorMap;
 	}
+	
+	public Character getReflection(Character c) {
+		
+		
+		
+		
+		return c;
+		
+	}
 
 }

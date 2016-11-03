@@ -3,7 +3,7 @@ package model;
 public class Rotator {
 
 	int[][] rotorValues;
-	int rotationCounter;
+	int rotationCounter = 0;
 
 	public Rotator(int[][] rotorVal, int startingValue) {
 		this.rotorValues = rotorVal;
@@ -30,7 +30,6 @@ public class Rotator {
 
 		int result = 0;
 		int target = i;
-		// int target = (i + rotationCounter)%rotorValues[0].length;
 
 		for (int c = 0; c < rotorValues[1].length; c++) {
 			if (rotorValues[1][c] == rotorValues[0][target]) {
@@ -55,6 +54,8 @@ public class Rotator {
 				rotorValues[i][(j + 1) % rotorValues[i].length] = arrayCopy[i][j];
 			}
 		}
+		
+		this.rotationCounter++;
 	}
 
 	public void printArrays() {

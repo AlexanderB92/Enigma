@@ -30,7 +30,9 @@ public class Encryption {
 		
 		currentIndex = r3.rightOutput(r2.rightOutput(r1.rightOutput(alphabetSpace)));
 		
-		System.out.println(currentIndex);
+		result = alphabet[currentIndex];
+		
+		System.out.println(result);
 		
 	}
 	
