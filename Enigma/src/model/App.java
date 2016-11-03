@@ -36,18 +36,18 @@ public class App {
 		//Reflector
 		Map<Character, Character> reflectorMap = new HashMap();
 		
-		reflectorMap.put('A', 'B');
-		reflectorMap.put('B', 'A');
-		reflectorMap.put('C', 'D');
-		reflectorMap.put('D', 'C');
+		reflectorMap.put('A', 'C');
+		reflectorMap.put('B', 'D');
+		reflectorMap.put('C', 'A');
+		reflectorMap.put('D', 'B');
 		
 		Reflector reflector = new Reflector(reflectorMap);
 		
 		Encryption encryption = new Encryption(r1, r2, r3, reflector);
 		
-		encryption.encrypt('B');
+		encryption.encrypt('C');
 		r1.rotateRotor();
-		encryption.encrypt('B');
+		encryption.encrypt('C');
 		
 
 	}

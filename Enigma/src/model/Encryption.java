@@ -20,20 +20,34 @@ public class Encryption {
 		
 		Character result;
 		int currentIndex;
-		int alphabetSpace = 0;
+		int alphabetIndex = getAlphabetIndex(letter);
+		
+		currentIndex = r3.rightOutput(r2.rightOutput(r1.rightOutput(alphabetIndex)));
+		
+		Character reflectorLetter = alphabet[currentIndex];
+		
+		reflectorLetter = reflector.getReflection(reflectorLetter);
+		
+		
+		int reflectorNumber = getAlphabetIndex(reflectorLetter);
+		
+		
+		currentIndex = r1.leftOutput(r2.leftOutput(r3.leftOutput(reflectorNumber)));
+		
+		System.out.println(alphabet[currentIndex]);
+		
+	}
+	
+	public int getAlphabetIndex(Character letter) {
+		int result = 0;
 		
 		for(int i = 0; i < alphabet.length; i++) {
 			if(alphabet[i] == letter) {
-				alphabetSpace = i;
+				result = i;
 			}
 		}
 		
-		currentIndex = r3.rightOutput(r2.rightOutput(r1.rightOutput(alphabetSpace)));
-		
-		result = alphabet[currentIndex];
-		
-		System.out.println(result);
-		
+		return result;	
 	}
 	
 	

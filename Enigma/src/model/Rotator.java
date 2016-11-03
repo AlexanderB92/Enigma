@@ -40,6 +40,19 @@ public class Rotator {
 		return result;
 	}
 
+	public int leftOutput(int i) {
+		int result = 0;
+		int target = i;
+
+		for (int c = 0; c < rotorValues[0].length; c++) {
+			if (rotorValues[0][c] == rotorValues[1][target]) {
+				result = c;
+			}
+		}
+
+		return result;
+	}
+
 	public void rotateRotor() {
 
 		// Creating copy of 2D array rotorValues
@@ -54,7 +67,7 @@ public class Rotator {
 				rotorValues[i][(j + 1) % rotorValues[i].length] = arrayCopy[i][j];
 			}
 		}
-		
+
 		this.rotationCounter++;
 	}
 

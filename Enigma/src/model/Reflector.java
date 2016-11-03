@@ -11,11 +11,7 @@ public class Reflector {
 	}
 	
 	public Character getReflection(Character c) {
-		
-		
-		
-		
-		return c;
+		return reflectorPairs.get(c);
 		
 	}
 
