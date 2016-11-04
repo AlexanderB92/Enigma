@@ -34,16 +34,16 @@ public class App {
 		Rotator r3 = new Rotator(rotor3, startingPos3);
 		
 		//Reflector
-		Map<Character, Character> reflectorMap = new HashMap();
-		
+		Map<Character, Character> reflectorMap = new HashMap<Character, Character>();
 		reflectorMap.put('A', 'C');
 		reflectorMap.put('B', 'D');
 		reflectorMap.put('C', 'A');
 		reflectorMap.put('D', 'B');
-		
 		Reflector reflector = new Reflector(reflectorMap);
 		
+		//Encryptor
 		Encryption encryption = new Encryption(r1, r2, r3, reflector);
+		
 		
 		encryption.encrypt('C');
 		r1.rotateRotor();

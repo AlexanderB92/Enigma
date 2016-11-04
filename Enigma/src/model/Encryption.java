@@ -22,16 +22,15 @@ public class Encryption {
 		int currentIndex;
 		int alphabetIndex = getAlphabetIndex(letter);
 		
+		//First run through rotators
 		currentIndex = r3.rightOutput(r2.rightOutput(r1.rightOutput(alphabetIndex)));
 		
+		//Get current letter from alphabet array and get corresponding reflection and it's index
 		Character reflectorLetter = alphabet[currentIndex];
-		
 		reflectorLetter = reflector.getReflection(reflectorLetter);
-		
-		
 		int reflectorNumber = getAlphabetIndex(reflectorLetter);
 		
-		
+		//Return through reflectors
 		currentIndex = r1.leftOutput(r2.leftOutput(r3.leftOutput(reflectorNumber)));
 		
 		System.out.println(alphabet[currentIndex]);
