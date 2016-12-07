@@ -21,15 +21,15 @@ public class App {
 		
 		//Rotor2
 		int[][] rotor2 = {
-				{0,3,2,1},
-				{1,2,3,0}
+				{4,25,2,17,0,10,19,11,23,9,22,7,26,15,21,16,13,5,18,6,20,14,1,8,24,3,12},
+				{25,10,3,6,18,23,0,7,26,9,2,5,12,22,14,21,20,17,4,19,16,15,13,11,24,1,8}
 		};
 		Rotator r2 = new Rotator(rotor2, startingPos2);
 		
 		//Rotor3
 		int[][] rotor3 = {
-				{2,0,1,3},
-				{1,2,0,3}
+				{26,15,1,7,4,12,6,3,8,19,10,11,5,22,14,0,16,18,23,9,20,25,13,17,24,21,2},
+				{1,4,26,7,2,12,6,3,23,11,9,10,5,21,19,24,16,22,18,14,20,13,15,8,17,25,0}
 		};
 		Rotator r3 = new Rotator(rotor3, startingPos3);
 		
@@ -69,7 +69,7 @@ public class App {
 		
 		encryption.encrypt('C');
 		r1.rotateRotor();
-		encryption.encrypt('C');
+		encryption.encrypt('P');
 		
 
 	}
