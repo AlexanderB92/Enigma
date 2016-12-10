@@ -66,17 +66,17 @@ public class App {
 		//Encryptor
 		Encryption encryption = new Encryption(r1, r2, r3, reflector);
 		
-		encryption.encrypt('A');
+		encryption.encrypt('D');
 		r1.rotateRotor();
-		encryption.encrypt('N');
+		encryption.encrypt('K');
 		r1.rotateRotor();
-		encryption.encrypt('Y');
+		encryption.encrypt('S');
 		r1.rotateRotor();
-		encryption.encrypt('B');
+		encryption.encrypt('X');
 		r1.rotateRotor();
-		encryption.encrypt('Z');
-		r1.rotateRotor();
-		encryption.encrypt('J');
+		encryption.encrypt('P');
+		r2.rotateRotor();
+		encryption.encrypt('G');
 
 
 		
