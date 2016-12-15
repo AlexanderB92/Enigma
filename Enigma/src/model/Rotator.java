@@ -22,8 +22,8 @@ public class Rotator {
 		return rotationCounter;
 	}
 
-	public void setRotorCounter(int rotorCounter) {
-		this.rotationCounter = rotorCounter;
+	public void resetRotorCounter() {
+		this.rotationCounter = 0;
 	}
 
 	public int rightOutput(int i) {

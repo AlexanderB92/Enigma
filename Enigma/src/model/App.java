@@ -1,7 +1,9 @@
 package model;
 
+import java.io.BufferedReader;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class App {
 
@@ -66,21 +68,15 @@ public class App {
 		//Encryptor
 		Encryption encryption = new Encryption(r1, r2, r3, reflector);
 		
-		encryption.encrypt('D');
-		r1.rotateRotor();
-		encryption.encrypt('K');
-		r1.rotateRotor();
-		encryption.encrypt('S');
-		r1.rotateRotor();
-		encryption.encrypt('X');
-		r1.rotateRotor();
-		encryption.encrypt('P');
-		r2.rotateRotor();
-		encryption.encrypt('G');
-
-
+		Scanner in = new Scanner(System.in);
 		
-
+		boolean done = false;
+		while(!done) {
+			Character toEncrypt = in.next().charAt(0);
+			encryption.encrypt(toEncrypt);
+		}
+		
+		in.close();
 	}
 
 }
