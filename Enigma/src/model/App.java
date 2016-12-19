@@ -68,8 +68,9 @@ public class App {
 		Encryption encryption = new Encryption(r1, r2, r3, reflector);
 		
 		Scanner in = new Scanner(System.in);
-		
 		boolean done = false;
+		System.out.println("Ready to encrypt...");
+		
 		while(!done) {
 			Character toEncrypt = in.next().charAt(0);
 			encryption.encrypt(toEncrypt);
