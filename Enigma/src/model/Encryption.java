@@ -18,9 +18,6 @@ public class Encryption {
 
 	public void encrypt(Character letter) {
 		
-		int i = 1;
-		i=-1;
-		Character result;
 		int currentIndex;
 		int alphabetIndex = getAlphabetIndex(letter);
 
